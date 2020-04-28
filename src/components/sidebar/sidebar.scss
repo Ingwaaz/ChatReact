@@ -1,0 +1,96 @@
+.sidebar {
+  position: fixed;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 60px;
+  background-color: #777;
+  transition: .35s;
+
+  &.active {
+    width: 150px;
+    transition: .35s;
+  }
+
+  &__wrapper {
+    height: 100%;
+
+    &__rooms {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 30px;
+      padding: 20px 0px;
+      transition: .3s;
+  
+      & span {
+        padding: 10px 5px;
+        cursor: pointer;
+      }
+
+      &.active {
+        height: 150px;
+      }
+  
+      &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 0;
+        opacity: 0;
+        transition: .3s;
+        user-select: none;
+  
+        &.active {
+          height: auto;
+          opacity: 1;
+          transition: .3s;
+          user-select: text;
+        }
+      }
+    }
+
+    &__members {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 30px;
+      padding: 20px 0px;
+      transition: .3s;
+  
+      & span {
+        padding: 10px 5px;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      &.active {
+        height: 150px;
+      }
+  
+      &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 0;
+        opacity: 0;
+        transition: .3s;
+        user-select: none;
+  
+        &.active {
+          height: auto;
+          opacity: 1;
+          transition: .3s;
+          user-select: text;
+        }
+      }
+    }
+  }
+}
