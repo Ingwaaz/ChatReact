@@ -45,6 +45,7 @@
         background-color: #cdcdcd;
         transform: translateY(25px);
         transition: .5s;
+        z-index: 9;
       }
 
       &__settings {

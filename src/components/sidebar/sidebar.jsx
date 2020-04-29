@@ -1,6 +1,9 @@
 import React from 'react';
 import './sidebar.scss';
 
+import RoomsList from '../roomsList/roomList';
+import Members from '../membersList/members';
+
 class Sidebar extends React.Component {
   constructor(props) {
     super(props);
@@ -51,7 +54,7 @@ class Sidebar extends React.Component {
                 this.state.roomsActive ? 'sidebar__wrapper__rooms__wrapper active' : 'sidebar__wrapper__rooms__wrapper'
               }
             >
-              <span>Вынести отдельным компонентом чатики</span>
+              <RoomsList roomsChat={this.props.roomsChat} classNameRooms="sidebar__wrapper__rooms__wrapper__"/>
             </div>
           </div>
           <div 
@@ -65,7 +68,7 @@ class Sidebar extends React.Component {
                 this.state.membersActive ? 'sidebar__wrapper__members__wrapper active' : 'sidebar__wrapper__members__wrapper'
               } 
             >
-              <span>Вынести отдельным компонентом Друзей</span>
+              <Members members={this.props.members} classNameMembers="sidebar__wrapper__members__wrapper__" />
             </div>
           </div>
         </div>
