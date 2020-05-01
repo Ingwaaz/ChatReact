@@ -40,14 +40,14 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="login-container">
-        <div className="login-form">
+      <div className="login">
+        <div className="login__form">
           <form onSubmit={this.handleSubmit}>
             <input type="text"
               name="name"
               onChange={this.handleChange}
               placeholder="Ваше имя"
-              className="input" 
+              className="login__form__input" 
               required
             />
             <input
@@ -55,17 +55,17 @@ class Login extends React.Component {
               name="email"
               onChange={this.handleChange}
               placeholder="Email"
-              className="input"
+              className="login__form__input"
               required
             />
             <textarea type="text"
               name="description"
               onChange={this.handleChange}
               placeholder="Немного о себе"
-              className="input textarea">
+              className="login__form__textarea">
             </textarea>
             <input type="submit"
-              className="button" 
+              className="login__form__button" 
               placeholder="Подтвердить"
             />
           </form>

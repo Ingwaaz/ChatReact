@@ -85,32 +85,32 @@ class Chat extends React.Component {
 
     return (
       <div className="users">
-        <div className="users-container"> 
-          <div className="current-user-container">
-              {currentUser &&
-                <div>
-                  <picture className="current-user-picture">
-                    <img alt={currentUser.name} src={currentUser.photoUrl} />
-                  </picture>
-                  <div className="current-user-info">
-                    <h3>{currentUser.name}</h3>
-                    <p>{currentUser.description}</p>
-                  </div>
-                </div>
-              }
+        <div className="users__current__user__container">
+          {currentUser &&
+            <div>
+              <picture className="users__current__user__container__picture">
+                <img alt={currentUser.name} src={currentUser.photoUrl} />
+              </picture>
+              <div className="users__current__user__container__info">
+                <h3>{currentUser.name}</h3>
+                <p>{currentUser.description}</p>
+              </div>
             </div>
+          }
+        </div>
+        <div className="users__container"> 
           <ul>
             { dummyUsers.map(user => 
-              <li key={user.id} className="user">
-                <picture className="user-picture">
+              <li key={user.id} className="users__container__user">
+                <picture className="users__container__user__picture">
                   <img src={user.photoUrl} alt={`${user.name}`} />
                 </picture>
-                <div className="user-info-container">
-                  <div className="user-info">
+                <div className="users__container__user__info">
+                  <div className="users__container__user__info__content">
                     <h4>{user.name}</h4>
                     <p>{user.info}</p>
                   </div>
-                  <div className="user-action">
+                  <div className="users__container__user__info__action">
                    <button onClick={(userId) => this.handleClickFloodChat(user.id)}>Написать</button>
                   </div>
                 </div>

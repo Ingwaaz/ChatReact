@@ -39,7 +39,7 @@ class Messaging extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div style={{height: '500px'}} className="inbox-container" ref={c => this.container = c}>Loading...</div>
+        <div style={{height: '500px'}} className="inbox-container" ref={c => this.container = c}></div>
       </React.Fragment>
     );
   }
